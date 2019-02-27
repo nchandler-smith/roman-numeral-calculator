@@ -2,11 +2,12 @@ public class Calculator {
 
     public String calculate(String input){
         String[] splitString = input.split("[+]");
-        String raw_result = splitString[0] + splitString[1];
-        if (raw_result.equals("IIIII")) {
-            return "V";
+        String result = splitString[0] + splitString[1];
+        if (result.contains("IIIII")) {
+            result = result.replace("IIIII", "V");
+            return result;
         }
-        return raw_result;
+        return result;
 
     }
 }
