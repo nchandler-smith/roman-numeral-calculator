@@ -7,6 +7,10 @@ public class Calculator {
             result = result.replace("IIIII", "V");
             return result;
         }
+        if (result.contains("IIII")) {
+            result = result.replace("IIII", "IV");
+            return result;
+        }
         return result;
 
     }
