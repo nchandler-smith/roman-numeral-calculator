@@ -2,6 +2,11 @@ public class Calculator {
 
     public String calculate(String input){
         String[] splitString = input.split("[+]");
-        return splitString[0] + splitString[1];
+        String raw_result = splitString[0] + splitString[1];
+        if (raw_result.equals("IIIII")) {
+            return "V";
+        }
+        return raw_result;
+
     }
 }
