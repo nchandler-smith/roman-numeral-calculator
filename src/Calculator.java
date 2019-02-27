@@ -11,6 +11,10 @@ public class Calculator {
             result = result.replace("IIII", "IV");
             return result;
         }
+        if (result.contains("VV")) {
+            result = result.replace("VV", "X");
+            return result;
+        }
         return result;
 
     }

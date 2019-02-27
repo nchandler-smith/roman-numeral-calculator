@@ -44,4 +44,9 @@ public class TestCalculator {
     public void testIIPlusIIEqualsIV() {
         assertEquals("IV", calculator.calculate("II+II"));
     }
+
+    @Test
+    public void testVPlusVEqualsX() {
+        assertEquals("X", calculator.calculate("V+V"));
+    }
 }
