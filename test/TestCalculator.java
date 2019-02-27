@@ -2,6 +2,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class TestCalculator {
 
@@ -13,4 +14,10 @@ public class TestCalculator {
         assertTrue(calculator instanceof Calculator);
     }
 
+    @Test
+    public void testIPlusIEqualsII(){
+        Calculator calculator = new Calculator();
+
+        assertEquals("II", calculator.calculate("I+I"));
+    }
 }
