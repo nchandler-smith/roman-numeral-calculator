@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -6,32 +7,31 @@ import static org.junit.Assert.assertEquals;
 
 public class TestCalculator {
 
+    Calculator calculator;
+
+    @Before
+    public void setUp() {
+        calculator = new Calculator();
+    }
+
     @Test
     public void testCreation() {
-        Calculator calculator = new Calculator();
-
         assertNotNull(calculator);
         assertTrue(calculator instanceof Calculator);
     }
 
     @Test
     public void testIPlusIEqualsII() {
-        Calculator calculator = new Calculator();
-
         assertEquals("II", calculator.calculate("I+I"));
     }
 
     @Test
     public void testIPlusIIEqualsIII() {
-        Calculator calculator = new Calculator();
-
         assertEquals("III", calculator.calculate("I+II"));
     }
 
     @Test
     public void testIIPlusIIIEqualsV() {
-        Calculator calculator = new Calculator();
-
         assertEquals("V", calculator.calculate("II+III"));
     }
 }
