@@ -15,9 +15,16 @@ public class TestCalculator {
     }
 
     @Test
-    public void testIPlusIEqualsII(){
+    public void testIPlusIEqualsII() {
         Calculator calculator = new Calculator();
 
         assertEquals("II", calculator.calculate("I+I"));
+    }
+
+    @Test
+    public void testIPlusIIEqualsIII() {
+        Calculator calculator = new Calculator();
+
+        assertEquals("III", calculator.calculate("I+II"));
     }
 }
